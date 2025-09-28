@@ -29,6 +29,7 @@ html,body{
    border: 1px solid #3a3a3a;
    border-radius: 16px;
    padding: 40px;
+   overflow-X: hidden;
    /* position: sticky;
    top: 40px; */
 }
@@ -83,11 +84,41 @@ html,body{
    
 }
 .social img{
+   height: 30px;
+   width: 30px;
    border-radius: 15px;
    margin-left: 10px;
+   background-color: #ffbf00cc;
    
 }
 
+#linkedin {
+  position: relative;
+  animation: moveLeft 3s ease-in-out alternate;
+}
+
+@keyframes moveLeft {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+#github{
+  position: relative;
+  animation: moveRight 3s ease-in-out alternate;
+}
+
+@keyframes moveRight {
+  from {
+    left: 150px;
+  }
+  to {
+    left: 0px;
+  }
+}
 
    /* main content section */
 .content{
@@ -264,7 +295,8 @@ nav a{
 }
  .project a{
    object-fit: cover;
-   text-decoration: none;
+            /* ancher tag ke line ko none karne ke liye */
+   text-decoration: none;     
 }
 .project img{
    height: 180px;
